@@ -90,8 +90,8 @@
     transform:translateY(-30%) scale(1.02);
   }
   .env-letter .stamp{
-    position:absolute;top:14px;right:14px;
-    width:96px;height:96px;
+    position:absolute;top:10px;right:6px;
+    width:58px;height:58px;
     background:transparent;
     border:none;
     padding:0;
@@ -421,37 +421,41 @@
   /* === FOOTER LOGOS === */
   .foot-logos{
     background:#fff;
-    padding:28px clamp(20px,5vw,48px);
+    padding:24px clamp(16px,4vw,32px);
     border-top:1px solid var(--line);
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:20px;
+    display:flex;
+    flex-wrap:wrap;
     align-items:center;
+    justify-content:center;
+    gap:18px;
   }
   .foot-logos .logo-group{
-    display:flex;flex-direction:column;align-items:center;gap:10px;
+    display:flex;flex-direction:column;align-items:center;gap:6px;
     text-align:center;
   }
   .foot-logos .logo-group + .logo-group{
     border-left:1px solid var(--line);
+    padding-left:18px;
   }
   .foot-logos .lbl{
-    font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;
+    font-size:9px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;
     color:#888;
   }
   .foot-logos .row{
     display:flex;align-items:center;justify-content:center;
-    gap:14px;flex-wrap:wrap;min-height:56px;
+    gap:10px;flex-wrap:nowrap;
   }
   .foot-logos img{
-    max-height:52px;width:auto;display:block;
+    max-height:36px;width:auto;display:block;
   }
-  .foot-logos img.tall{max-height:60px}
+  .foot-logos img.tall{max-height:42px}
   @media (max-width:560px){
-    .foot-logos{grid-template-columns:1fr;gap:18px}
+    .foot-logos{gap:14px;padding:20px 14px}
     .foot-logos .logo-group + .logo-group{
-      border-left:none;border-top:1px solid var(--line);padding-top:18px;
+      border-left:none;padding-left:0;
     }
+    .foot-logos img{max-height:30px}
+    .foot-logos img.tall{max-height:36px}
   }
 
   /* === RSVP === */
@@ -625,6 +629,21 @@
     font-size:11px;letter-spacing:.16em;text-transform:uppercase;
   }
   .foot strong{color:#fff;font-weight:700;display:block;margin-bottom:6px;letter-spacing:.22em}
+  .foot .rgpd{
+    margin:22px auto 0;
+    max-width:640px;
+    padding-top:18px;
+    border-top:1px solid rgba(255,255,255,.12);
+    font-size:11px;
+    line-height:1.6;
+    letter-spacing:.02em;
+    text-transform:none;
+    color:rgba(255,255,255,.5);
+    text-align:left;
+  }
+  .foot .rgpd strong{
+    display:inline;color:rgba(255,255,255,.78);font-weight:600;letter-spacing:0;
+  }
 
   @media (max-width:520px){
     .field-row{grid-template-columns:1fr}
@@ -899,9 +918,9 @@
     <div class="logo-group">
       <span class="lbl">Colaboração</span>
       <div class="row">
-        <img src="assets/protecao-civil-madeira.png" alt="Serviço Regional de Proteção Civil — Madeira">
+        <img src="assets/protecao-civil-madeira.webp" alt="Serviço Regional de Proteção Civil — Madeira">
         <img src="assets/protecao-civil-acores.png" alt="Serviço Regional de Proteção Civil — Açores">
-        <img src="assets/intervir.png" alt="Intervir.pt">
+        <img src="assets/intervir.jpg" alt="Intervir.pt">
         <img src="assets/hazfire.png" alt="HAZFIRE">
       </div>
     </div>
@@ -910,6 +929,9 @@
   <footer class="foot">
     <strong>Regimento de Sapadores Bombeiros de Lisboa</strong>
     Câmara Municipal de Lisboa · 2026
+    <p class="rgpd">
+      <strong>Captação de imagem.</strong> Durante o presente evento poderão ser captadas imagens e vídeo para fins de divulgação institucional do Regimento de Sapadores Bombeiros de Lisboa (RSBL), nos termos do Regulamento Geral sobre a Proteção de Dados (RGPD). A participação implica o conhecimento desta informação.
+    </p>
   </footer>
 </main>
 

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cmdkey /list)",
+      "Bash(Select-String -Pattern \"github\" -Context 0,2)",
+      "Read(//c/Users/cabri/OneDrive - Câmara Municipal de Lisboa/01 Projectos/Evento 18-05-2026/APP/Github/Convites-RSB/**)"
+    ]
+  }
+}
